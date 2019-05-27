@@ -1,0 +1,652 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" type="text/javascript"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galeria</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <audio loop id="myAudio" preload="auto">
+        <source src="audio/music.mp3" type="audio/mp3">
+    </audio>
+    <main>
+        <!--<div class="loader">
+            <div class="topLoader"></div>
+            <div class="middleLoader"></div>
+            <div class="bottomLoader"></div>
+        </div>-->
+        <div class="home"><a href="index.html"><img src="pic/home.png" /></a></div>
+        <div class="showMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="menu">
+            <div class="menuItems">
+                <a href="index.html">Strona głowna</a>
+                <a href="informacje.html">Zespoły</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="albumy.html">Albumy</a>
+            </div>
+        </div>
+        <div class="content">
+            <!--ACDC-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/acdc/concert1.jpg" onclick="openModal();currentImage(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/acdc/band.jpg" onclick="openModal();currentImage(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/acdc/concert2.jpg" onclick="openModal();currentImage(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/acdc/concert3.jpg" onclick="openModal();currentImage(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/acdc/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/acdc/band1.jpg" onclick="openModal();currentImage(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/acdc/concert4.jpg" onclick="openModal();currentImage(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/acdc/concert5.jpg" onclick="openModal();currentImage(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages">
+                            <img src="pic/acdc/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages">
+                            <img src="pic/acdc/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages">
+                            <img src="pic/acdc/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages">
+                            <img src="pic/acdc/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages">
+                            <img src="pic/acdc/band1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages">
+                            <img src="pic/acdc/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages">
+                            <img src="pic/acdc/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--QUEEN-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/queen/concert1.jpg" onclick="openModal1();currentImage1(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/queen/band.jpg" onclick="openModal1();currentImage1(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/queen/concert2.jpg" onclick="openModal1();currentImage1(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/queen/concert3.jpg" onclick="openModal1();currentImage1(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/queen/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/queen/concert4.jpg" onclick="openModal1();currentImage1(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/queen/concert5.jpg" onclick="openModal1();currentImage1(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/queen/concert6.jpg" onclick="openModal1();currentImage1(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal1" class="modal">
+                    <span class="close" onclick="closeModal1()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages1">
+                            <img src="pic/queen/concert1.jpg" style="width:100%">
+                        </div>
+                        <div class="myImages1">
+                            <img src="pic/queen/band.jpg" style="width:100%">
+                        </div>
+                        <div class="myImages1">
+                            <img src="pic/queen/concert2.jpg" style="width:100%">
+                        </div>
+                        <div class="myImages1">
+                            <img src="pic/queen/concert3.jpg" style="width:100%">
+                        </div>
+                        <div class="myImages1">
+                            <img src="pic/queen/concert4.jpg" style="width:100%">
+                        </div>
+                        <div class="myImages1">
+                            <img src="pic/queen/concert5.jpg" style="width:100%">
+                        </div>
+                        <div class="myImages1">
+                            <img src="pic/queen/concert6.jpg" style="width:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage1(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage1(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--ROLLING STONES-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/rollingStones/concert1.jpg" onclick="openModal2();currentImage2(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/rollingStones/band1.jpg" onclick="openModal2();currentImage2(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/rollingStones/concert2.jpg" onclick="openModal2();currentImage2(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/rollingStones/concert3.jpg" onclick="openModal2();currentImage2(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/rollingStones/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/rollingStones/band2.jpg" onclick="openModal2();currentImage2(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/rollingStones/concert4.jpg" onclick="openModal2();currentImage2(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/rollingStones/concert5.jpg" onclick="openModal2();currentImage2(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal2" class="modal">
+                    <span class="close" onclick="closeModal2()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/band1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/band2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages2">
+                            <img src="pic/rollingStones/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage2(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage2(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--RED HOT CHILI PEPPERS-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/rhcp/concert1.jpg" onclick="openModal3();currentImage3(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/rhcp/band.jpg" onclick="openModal3();currentImage3(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/rhcp/concert2.jpg" onclick="openModal3();currentImage3(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/rhcp/concert3.jpg" onclick="openModal3();currentImage3(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/rhcp/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/rhcp/concert4.jpg" onclick="openModal3();currentImage3(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/rhcp/concert5.jpg" onclick="openModal3();currentImage3(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/rhcp/concert6.jpg" onclick="openModal3();currentImage3(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal3" class="modal">
+                    <span class="close" onclick="closeModal3()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages3">
+                            <img src="pic/rhcp/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages3">
+                            <img src="pic/rhcp/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages3">
+                            <img src="pic/rhcp/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages3">
+                            <img src="pic/rhcp/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages3">
+                            <img src="pic/rhcp/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages3">
+                            <img src="pic/rhcp/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages3">
+                            <img src="pic/rhcp/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage3(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage3(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--FOO FIGHTERS-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/ff/concert1.jpg" onclick="openModal4();currentImage4(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/ff/band.jpg" onclick="openModal4();currentImage4(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/ff/concert2.jpg" onclick="openModal4();currentImage4(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/ff/concert3.jpg" onclick="openModal4();currentImage4(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/ff/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/ff/concert4.jpg" onclick="openModal4();currentImage4(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/ff/concert5.jpg" onclick="openModal4();currentImage4(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/ff/concert6.jpg" onclick="openModal4();currentImage4(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal4" class="modal">
+                    <span class="close" onclick="closeModal4()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages4">
+                            <img src="pic/ff/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages4">
+                            <img src="pic/ff/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages4">
+                            <img src="pic/ff/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages4">
+                            <img src="pic/ff/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages4">
+                            <img src="pic/ff/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages4">
+                            <img src="pic/ff/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages4">
+                            <img src="pic/ff/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage4(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage4(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--OFFSPRING-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/offspring/concert1.jpg" onclick="openModal5();currentImage5(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/offspring/band.jpg" onclick="openModal5();currentImage5(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/offspring/concert2.jpg" onclick="openModal5();currentImage5(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/offspring/concert3.jpg" onclick="openModal5();currentImage5(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/offspring/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/offspring/concert4.jpg" onclick="openModal5();currentImage5(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/offspring/concert5.jpg" onclick="openModal5();currentImage5(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/offspring/concert6.jpg" onclick="openModal5();currentImage5(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal5" class="modal">
+                    <span class="close" onclick="closeModal5()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages5">
+                            <img src="pic/offspring/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages5">
+                            <img src="pic/offspring/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages5">
+                            <img src="pic/offspring/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages5">
+                            <img src="pic/offspring/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages5">
+                            <img src="pic/offspring/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages5">
+                            <img src="pic/offspring/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages5">
+                            <img src="pic/offspring/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage5(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage5(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--FIVE FINGER DEATH PUNCH-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/ffdp/concert1.jpg" onclick="openModal6();currentImage6(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/ffdp/band.jpg" onclick="openModal6();currentImage6(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/ffdp/concert2.jpg" onclick="openModal6();currentImage6(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/ffdp/concert3.jpg" onclick="openModal6();currentImage6(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/ffdp/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/ffdp/concert4.jpg" onclick="openModal6();currentImage6(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/ffdp/concert5.jpg" onclick="openModal6();currentImage6(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/ffdp/concert6.jpg" onclick="openModal6();currentImage6(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal6" class="modal">
+                    <span class="close" onclick="closeModal6()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages6">
+                            <img src="pic/ffdp/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages6">
+                            <img src="pic/ffdp/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages6">
+                            <img src="pic/ffdp/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages6">
+                            <img src="pic/ffdp/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages6">
+                            <img src="pic/ffdp/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages6">
+                            <img src="pic/ffdp/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages6">
+                            <img src="pic/ffdp/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage6(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage6(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--PINK FLOYD-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/pinkFloyd/concert1.jpg" onclick="openModal7();currentImage7(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/pinkFloyd/band.jpg" onclick="openModal7();currentImage7(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/pinkFloyd/concert2.jpg" onclick="openModal7();currentImage7(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/pinkFloyd/concert3.jpg" onclick="openModal7();currentImage7(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/pinkFloyd/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/pinkFloyd/concert4.jpg" onclick="openModal7();currentImage7(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/pinkFloyd/concert5.jpg" onclick="openModal7();currentImage7(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/pinkFloyd/concert6.jpg" onclick="openModal7();currentImage7(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal7" class="modal">
+                    <span class="close" onclick="closeModal7()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages7">
+                            <img src="pic/pinkFloyd/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage7(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage7(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--SOAD-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/soad/concert1.jpg" onclick="openModal8();currentImage8(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/soad/band.jpg" onclick="openModal8();currentImage8(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/soad/concert2.jpg" onclick="openModal8();currentImage8(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/soad/concert3.jpg" onclick="openModal8();currentImage8(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/soad/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/soad/concert4.jpg" onclick="openModal8();currentImage8(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/soad/concert5.jpg" onclick="openModal8();currentImage8(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/soad/concert6.jpg" onclick="openModal8();currentImage8(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal8" class="modal">
+                    <span class="close" onclick="closeModal8()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages8">
+                            <img src="pic/soad/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages8">
+                            <img src="pic/soad/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages8">
+                            <img src="pic/soad/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages8">
+                            <img src="pic/soad/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages8">
+                            <img src="pic/soad/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages8">
+                            <img src="pic/soad/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages8">
+                            <img src="pic/soad/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage8(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage8(1)">&#10095;</a>
+                </div>
+            </div>
+            <!--THE BLACK KEYS-->
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="gallery">
+                        <figure class="gallery-item gallery-item-1">
+                            <img src="pic/theBlackKeys/concert1.jpg" onclick="openModal9();currentImage9(1)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-2">
+                            <img src="pic/theBlackKeys/band.jpg" onclick="openModal9();currentImage9(2)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-3">
+                            <img src="pic/theBlackKeys/concert2.jpg" onclick="openModal9();currentImage9(3)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-4">
+                            <img src="pic/theBlackKeys/concert3.jpg" onclick="openModal9();currentImage9(4)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-5">
+                            <img src="pic/theBlackKeys/logo.jpg" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-6">
+                            <img src="pic/theBlackKeys/concert4.jpg" onclick="openModal9();currentImage9(5)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-7">
+                            <img src="pic/theBlackKeys/concert5.jpg" onclick="openModal9();currentImage9(6)" class="gallery-img">
+                        </figure>
+                        <figure class="gallery-item gallery-item-8">
+                            <img src="pic/theBlackKeys/concert6.jpg" onclick="openModal9();currentImage9(7)" class="gallery-img">
+                        </figure>
+                    </div>
+                </div>
+                <div id="myModal9" class="modal">
+                    <span class="close" onclick="closeModal9()">&times;</span>
+                    <div class="modal-content">
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/concert1.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/band.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/concert2.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/concert3.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/concert4.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/concert5.jpg" style="width:100%;height:100%">
+                        </div>
+                        <div class="myImages9">
+                            <img src="pic/theBlackKeys/concert6.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+                    <a class="prev" onclick="plusImage9(-1)">&#10094;</a>
+                    <a class="next" onclick="plusImage9(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <div class="prevSlide">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        </div>
+        <div class="nextSlide">
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="leftbar"></div>
+        <div class="footleft">
+            <div class="note"><img src="pic/note.png" /></div>
+        </div>
+        <div class="music">
+            <div id="playPause" class="play" onclick="togglePlay()"></div>
+            <img src="pic/volume.png" class="volume" />
+        </div>
+        <input type="range" class="changeVolume" id="volume" min="1" max="100" value="100" oninput="volume()" onchange="volume()">
+        <div class="rightbar"></div>
+        <div class="footright">
+            <p>&copy; Szymon Latkowski</p>
+        </div>
+    </main>
+    <script src="js/music.js" type="text/javascript"></script>
+    <script src="js/gallery.js" type="text/javascript"></script>
+    <script src="js/toggleClass.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Albumy</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <audio loop id="myAudio" preload="auto">
+        <source src="audio/music.mp3" type="audio/mp3">
+    </audio>
+    <main>
+        <!--<div class="loader">
+            <div class="topLoader"></div>
+            <div class="middleLoader"></div>
+            <div class="bottomLoader"></div>
+        </div>-->
+        <div class="home"><a href="index.html"><img src="pic/home.png" /></a></div>
+        <div class="showMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div class="menu">
+            <div class="menuItems">
+                <a href="index.html">Strona głowna</a>
+                <a href="informacje.html">Zespoły</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="albumy.html">Albumy</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="albums">
+                <div class="album" id="albumACDC"><img src="pic/acdc/logo.jpg" /></div>
+                <div class="album" id="albumQUEEN"><img src="pic/queen/logo.jpg" /></div>
+                <div class="album" id="albumRS"><img src="pic/rollingStones/logo.jpg" /></div>
+                <div class="album" id="albumRHCP"><img src="pic/rhcp/logo.jpg" /></div>
+                <div class="album" id="albumFF"><img src="pic/ff/logo.jpg" /></div>
+
+                <div class="albumList acdc">
+                    <ul>
+                        <li>High Voltage 1975</li>
+                        <li>T.N.T. 1975</li>
+                        <li>Dirty Deeds Done Dirt Cheap 1976</li>
+                        <li>Let There Be Rock 1977</li>
+                        <li>Powerage 1978</li>
+                        <li>Highway to Hell 1979</li>
+                        <li>Back in Black 1980</li>
+                        <li>For Those About to Rock We Salute You 1981</li>
+                        <li>Flick of the Switch 1983</li>
+                        <li>Fly on the Wall 1985</li>
+                        <li>Blow Up Your Video 1988</li>
+                        <li>The Razor's Edge 1990</li>
+                        <li>Ballbreaker 1995</li>
+                        <li>Sriff Upper Lip 2000</li>
+                        <li>Black Ice 2008</li>
+                        <li>Rock or Bust 2014</li>
+                    </ul>
+                </div>
+                <div class="albumList queen">
+                    <ul>
+                        <li>Queen 1973</li>
+                        <li>Queen II 1974</li>
+                        <li>Sheer Heart Attack 1974</li>
+                        <li>A Night at the Opera 1975</li>
+                        <li>A Day at the Races 1976</li>
+                        <li>News of the World 1977</li>
+                        <li>Jazz 1978</li>
+                        <li>The Game 1980</li>
+                        <li>Flash Gordon 1980</li>
+                        <li>Hot Space 1982</li>
+                        <li>The Works 1984</li>
+                        <li>The Miracle 1989</li>
+                        <li>Innuendo 1981</li>
+                        <li>Made in Heaven 1995</li>
+                    </ul>
+                </div>
+                <div class="albumList rS">
+                    <ul>
+                        <li>The Rolling Stones 1964</li>
+                        <li>12 X 5 1964</li>
+                        <li>The Rolling Stones No. 2 1965</li>
+                        <li>Out of Our Heads 1965</li>
+                        <li>December's Children 1965</li>
+                        <li>Aftermatch 1966</li>
+                        <li>Between the Buttons 1967</li>
+                        <li>Their Satanic Majesties Request 1967</li>
+                        <li>Beggars Banquet 1968</li>
+                        <li>Let It Bleed 1969</li>
+                        <li>Sticky Fingers 1971</li>
+                        <li>Exile on Main St. 1972</li>
+                        <li>Goats Head Soup 1973</li>
+                        <li>It's Only Rock 'n Roll 1974</li>
+                        <li>Black and Blue 1976</li>
+                        <li>Some Girls 1978</li>
+                        <li>Emontional Rescue 1980</li>
+                        <li>Tatto You 1981</li>
+                        <li>Undercover 1983</li>
+                        <li>Dirty Work 1986</li>
+                        <li>Steel Wheels 1989</li>
+                        <li>Voodoo Lounge 1994</li>
+                        <li>Bridges to Babylon 1997</li>
+                        <li>A Bigger Bang 2005</li>
+                        <li>Blue & Lonesome 2016</li>
+                    </ul>
+                </div>
+                <div class="albumList rhcp">
+                    <ul>
+                        <li>The Red Hot Chili Peppers 1984</li>
+                        <li>Freaky Styley 1985</li>
+                        <li>The Uplift Mofo Party Plan 1987</li>
+                        <li>Mother's Milk 1989</li>
+                        <li>Blood Sugar Sex Magik 1991</li>
+                        <li>One Hot Minute 1995</li>
+                        <li>Californication 1999</li>
+                        <li>By the Way 2002</li>
+                        <li>Stadium Arcadium 2006</li>
+                        <li>I'm with You 2011</li>
+                        <li>The Getaway 2016</li>
+                    </ul>
+                </div>
+                <div class="albumList ff">
+                    <ul>
+                        <li>Foo Fighters 1995</li>
+                        <li>The Colour and the Shape 1997</li>
+                        <li>There is Nothing Left to Lose 1999</li>
+                        <li>One by One 2002</li>
+                        <li>In Your Honor 2005</li>
+                        <li>Echoes, Silence, Patience & Grace 2007</li>
+                        <li>Wasting Light 2011</li>
+                        <li>Sonic Highways 2014</li>
+                        <li>Concrete and Gold 2017</li>
+                    </ul>
+                </div>
+
+                <div class="album" id="albumOS"><img src="pic/offspring/logo.jpg" /></div>
+                <div class="album" id="albumFFDP"><img src="pic/ffdp/logo.jpg" /></div>
+                <div class="album" id="albumPF"><img src="pic/pinkFloyd/logo.jpg" /></div>
+                <div class="album" id="albumSOAD"><img src="pic/soad/logo.jpg" /></div>
+                <div class="album" id="albumTBK"><img src="pic/theBlackKeys/logo.jpg" /></div>
+
+                <div class="albumList offspring">
+                    <ul>
+                        <li>The Offspring 1989</li>
+                        <li>Ignition 1992</li>
+                        <li>Smash 1994</li>
+                        <li>Ixany on the Hombre 1997</li>
+                        <li>Americana 1998</li>
+                        <li>Conspiracy of One 2000</li>
+                        <li>Splinter 2003</li>
+                        <li>Rise and Fall, Rage and Grace 2008</li>
+                    </ul>
+                </div>
+                <div class="albumList ffdp">
+                    <ul>
+                        <li>The Way of the First 2007</li>
+                        <li>War Is the Answer 2009</li>
+                        <li>American Capitalist 2011</li>
+                        <li>The Wrong Side of Heaven and the Righteous Side of Hell 2013</li>
+                        <li>Got Your Six 2015</li>
+                        <li>And Justice for None 2018</li>
+                    </ul>
+                </div>
+                <div class="albumList pF">
+                    <ul>
+                        <li>The Piper at the Gates of Dawn 1967</li>
+                        <li>A Saucerful of Secrets 1968</li>
+                        <li>Music from the Film More 1969</li>
+                        <li>Ummagumma 1969</li>
+                        <li>Atom Heart Mother 1970</li>
+                        <li>Meddle 1971</li>
+                        <li>Obscured by Clouds 1972</li>
+                        <li>The Dark Side of the Moon 1973</li>
+                        <li>Wish You Were Here 1975</li>
+                        <li>Animals 1977</li>
+                        <li>The Wall 1979</li>
+                        <li>The Final Cut 1983</li>
+                        <li>A Momentary Lapse of Reason 1987</li>
+                        <li>The Division Bell 1994</li>
+                        <li>The Endless River 2014</li>
+                    </ul>
+                </div>
+                <div class="albumList soad">
+                    <ul>
+                        <li>System of a Down 1998</li>
+                        <li>Toxicity 2001</li>
+                        <li>Steal This Album! 2002</li>
+                        <li>Mezmerize 2005</li>
+                        <li>Hypnotize 2005</li>
+                    </ul>
+                </div>
+                <div class="albumList TBK">
+                    <ul>
+                        <li>The Big Come Up 2002</li>
+                        <li>Thickfreakness 2003</li>
+                        <li>The Moan 2004</li>
+                        <li>Rubber Factory 2004</li>
+                        <li>Magic Potion 2006</li>
+                        <li>Attack & Release 2008</li>
+                        <li>Brothers 2010</li>
+                        <li>El Camino 2011</li>
+                        <li>Turn Blue 2014</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+        <div class="leftbar"></div>
+        <div class="footleft">
+            <div class="note"><img src="pic/note.png" /></div>
+        </div>
+        <div class="music">
+            <div id="playPause" class="play" onclick="togglePlay()"></div>
+            <img src="pic/volume.png" class="volume" />
+        </div>
+        <input type="range" class="changeVolume" id="volume" min="1" max="100" value="100" oninput="volume()" onchange="volume()">
+        <div class="rightbar"></div>
+        <div class="footright">
+            <p>&copy; Szymon Latkowski</p>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/toggleClass.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

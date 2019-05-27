@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strona głowna</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <main>
+        <audio loop id="myAudio" preload="auto">
+            <source src="audio/music.mp3" type="audio/mp3">
+        </audio>
+        <div class="home"><a href="index.html"><img src="pic/home.png" /></a></div>
+        <div class="showMenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div class="menu">
+            <div class="menuItems">
+                <a href="index.html">Strona głowna</a>
+                <a href="informacje.html">Zespoły</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="albumy.html">Albumy</a>
+            </div>
+        </div>
+        <video autoplay muted loop class="videoBackgroud">
+            <source src="video/video.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <div class="pageTitle">
+                <h1>Rock 'n' Roll </h1>
+            </div>
+        </div>
+        <div class="leftbar"></div>
+        <div class="footleft">
+            <div class="note"><img src="pic/note.png" /></div>
+        </div>
+        <div class="music">
+            <div id="playPause" class="play" onclick="togglePlay()"></div>
+            <img src="pic/volume.png" class="volume" />
+        </div>
+        <input type="range" class="changeVolume" id="volume" min="1" max="100" value="100" oninput="volume()" onchange="volume()">
+        <div class="rightbar"></div>
+        <div class="footright">
+            <p>&copy; Szymon Latkowski</p>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/toggleClass.js"></script>
+</body>
+</html>
